@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-400">
+    <form class="todo-form w-[500px] p-5 mt-5 mx-auto bg-white rounded-md flex gap-2">
+        <input class="todo-input w-[80%] border-[1px] border-slate-500 p-2 rounded-md mb-3" required type="text"name="userinput">
+        <button class="w-[20%] h-[44px] bg-green-500 text-center text-white rounded-md hover:opacity-[0.6]"type="submit">Add</button>
+    </form>
+    <button onclick="handleDeleteAllClickBtn()" class="block mx-auto bg-red-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-red-600 transition duration-300 mt-3">
+        <span class="text-sm">Delete All</span>
+    </button>
+
+    <ul class="todo-list w-[450px] space-y-[10px] bg-white p-5 rounded-md mx-auto mt-5"></ul>
+
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
